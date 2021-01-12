@@ -33,7 +33,12 @@
     $("#empty-div").append(newDiv);
 
     // If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
-    newDiv.attr("class", "fancy");
+    newDiv.addClass("fancy");
+
+    setTimeout(function() {
+      newDiv.removeClass("fancy");
+    }, 1500);
+
 
   </script>
 
