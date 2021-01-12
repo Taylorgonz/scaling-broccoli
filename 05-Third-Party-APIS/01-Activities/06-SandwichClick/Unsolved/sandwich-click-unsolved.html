@@ -28,8 +28,13 @@
     $(document).ready(function() {
 
       // VARIABLES
-      // ====================================================================
+      // 
+      //====================================================================
       // Here we create variables for tracking the number of sandwiches eaten
+      let pbjCounter= 0;
+      let grilledCheeseCounter = 0;
+      let roastBeefCounter = 0;
+      
       // ...
 
 
@@ -38,6 +43,31 @@
       // FUNCTIONS
       // ====================================================================
       // Here we create various on "click" functions which capture the clicks
+      $("#pbj").on("click", function() {
+
+        alert("Really... a peanut butter and jelly??");
+        pbjCounter++;
+        alert("You've eaten " + pbjCounter + " PBJ sandwiches!")
+
+        $("#image-div").html("<img src='https://chowhound3.cbsistatic.com/recipe_photos/30000_grilled_peanut_butter_jelly.jpg'/>");
+      });
+
+      $("#grilledcheese").on("click", function() {
+
+        alert("oooooh the perfect sandwich, GRILLED CHEESE!");
+          grilledCheeseCounter++;
+        alert("You've eaten " + grilledCheeseCounter + " grilled cheese sandwiches!")
+
+        $("#image-div").html("<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb3NGQky-nhZobdC1hckJq5U_7COpOEs32Ig&usqp=CAU'/>");
+      });
+
+      $("#roastbeef").on("click", function() {
+        alert("more like roast BEAST!");
+        roastBeefCounter++;
+        alert("You've eaten " + roastBeefCounter + " roast beef sandwiches!");
+
+        $("#image-div").html("<img src='https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/Roast_Beef-700x461.jpg'/>");
+      });
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
 
