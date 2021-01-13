@@ -62,12 +62,31 @@
         <script type="text/javascript">
           $(document).ready(function() {
 
+              let computerPick= Math.floor(Math.random() * 4) +1;
+              let lockGame = false;
             // Here we create the on click event that gets the user's pick
             $(".btn-choice").on("click", function() {
 
               console.log("You clicked a button!!");
 
+              if(!lockGame) {
+
+                let yourPick = $(this).val();
+                console.log("your pick" + yourPick);
+
+                $("#computer-pick").text(computerPick);
+
+                if(parseInt(yourPick) === computerPick) {
+                  $("#result").text('Yep! You got it! refresh to play again!')
+                  lockGame=true;
+                } else {
+                  $("#result").text("Nope. Refresh the page to start again.");
+                  lockGame=true;
+                }
+
+              }
               // Add code to have the computer guess a random number between 1 and 4
+
               // Then determine which button was clicked
               // Compare the computer and user guess
               // Inform the user if the've guessed correctly or incorrectly
