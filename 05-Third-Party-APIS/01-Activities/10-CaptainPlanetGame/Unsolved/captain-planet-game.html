@@ -85,13 +85,27 @@
             </div>
           </div>
         </div>
+        
+        <!-- New super power -->
+        <div id="ecoModeControls" class="card">
+          <h4 class="card-header">Superpowers - Eco Mode!</h4>
+          <div class="card-body">
+            <div class="text-center">
+              <button class="btn btn-success btn-lg eco-button">
+                <span class="fa fa-eye"></span> Go Green!</button>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
       <!-- Right Card (Captain Planet Hero)-->
       <div class="col-lg-6">
 
         <!-- Captain Planet Image -->
+        <div class="green-planet">
         <img src="assets/captain-planet.jpg" alt="" class="img captain-planet" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px">
+        </div>
       </div>
     </div>
   </div>
@@ -106,6 +120,11 @@
     // Gets Link for Theme Song
     var audioElement = document.createElement("audio");
     audioElement.setAttribute("src", "assets/captainplanet24.mp3");
+
+    // eco mode buttons
+    $(".eco-button").on("click", function() {
+     captainPlanet.attr("src", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/the-mask-1562362749.jpg?crop=0.8915797317436661xw:1xh;center,top&resize=480:*")
+    });
 
     // Theme Button
     $(".theme-button").on("click", function() {
